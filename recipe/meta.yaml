@@ -1,42 +1,61 @@
-{% set version = "1.6.0rc1" %}
+{% set name = "bluesky" %}
+{% set version = "1.5.4" %}
+{% set sha256 = "309d284bb3f95539e1d89a76b4e640f59a6b575308582690c9fbc259a9cd329c" %}
 
 package:
-    name: bluesky
-    version: {{ version }}
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-    git_url: https://github.com/nsls-ii/bluesky
-    git_rev: v{{ version }}
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-    number: 0
-    script: python setup.py install --single-version-externally-managed --record=record.txt
-    skip: True  # [py2k]
+  noarch: python
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-    build:
-        - python
-
-    run:
-        - cycler
-        - databroker
-        - event-model >=1.10.0
-        - historydict
-        - ipython
-        - lmfit
-        - matplotlib
-        - numpy
-        - ophyd
-        - python
-        - pyzmq
-        - super_state_machine
-        - toolz
-        - tqdm
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - cycler
+    - databroker
+    - doct
+    - event-model >=1.10.0
+    - historydict
+    - ipython
+    - jsonschema
+    - lmfit
+    - matplotlib
+    - numpy
+    - ophyd
+    - pyzmq
+    - super_state_machine
+    - toolz
+    - tqdm
 
 test:
-    imports:
-        - bluesky
+  imports:
+    - bluesky
+    - bluesky.plans
+    - bluesky.callbacks
 
 about:
-    home: https://github.com/bluesky/bluesky
-    license: BSD
+  home: https://blueskyproject.io/
+  license: BSD-3-clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: 'A Python data collection interface for experimental science'
+
+  description: 'A Python data collection interface for experimental science'
+  doc_url: https://blueskyproject.io/bluesky
+  dev_url: https://github.com/bluesky/bluesky
+
+extra:
+  recipe-maintainers:
+    - CJ-Wright
+    - conda-forge/event-model
