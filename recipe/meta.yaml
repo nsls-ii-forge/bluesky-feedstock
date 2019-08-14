@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/NSLS-II/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/bluesky/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -45,14 +45,14 @@ test:
     - bluesky.callbacks
 
 about:
-  home: https://github.com/bluesky/bluesky
+    home: https://blueskyproject.io/
   license: BSD-3-clause
   license_family: BSD
   license_file: LICENSE
   summary: 'A Python data collection interface for experimental science'
 
   description: 'A Python data collection interface for experimental science'
-  doc_url: http://nsls-ii.github.io/bluesky/
+  doc_url: https://blueskyproject.io/bluesky
   dev_url: https://github.com/bluesky/bluesky
 
 extra:
