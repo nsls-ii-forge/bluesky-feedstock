@@ -19,7 +19,6 @@ requirements:
   host:
     - python >=3.6
     - pip
-
   run:
     - python >=3.6
     - cycler
@@ -49,12 +48,10 @@ about:
   license_family: BSD
   license_file: LICENSE
   summary: 'A Python data collection interface for experimental science'
-
   description: 'A Python data collection interface for experimental science'
   doc_url: https://blueskyproject.io/bluesky
   dev_url: https://github.com/bluesky/bluesky
 
 extra:
   recipe-maintainers:
-    - CJ-Wright
     - conda-forge/event-model
