@@ -29,12 +29,15 @@ requirements:
     - ipython
     - lmfit
     - matplotlib
+    - msgpack
+    - msgpack-numpy
     - numpy
     - ophyd
     - pyzmq
     - super_state_machine
     - toolz
     - tqdm
+    - zict
 
 test:
   imports:
