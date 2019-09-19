@@ -29,8 +29,8 @@ requirements:
     - ipython
     - lmfit
     - matplotlib
-    - msgpack-python
     - msgpack-numpy
+    - msgpack-python
     - numpy
     - ophyd
     - pyzmq
