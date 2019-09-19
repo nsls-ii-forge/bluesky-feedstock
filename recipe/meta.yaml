@@ -51,7 +51,3 @@ about:
   description: 'A Python data collection interface for experimental science'
   doc_url: https://blueskyproject.io/bluesky
   dev_url: https://github.com/bluesky/bluesky
-
-extra:
-  recipe-maintainers:
-    - conda-forge/event-model
