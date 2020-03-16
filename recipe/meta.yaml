@@ -1,6 +1,6 @@
 {% set name = "bluesky" %}
-{% set version = "1.6.0rc5" %}
-{% set sha256 = "9afddf8621bdc18ff85e97ce68c2249096af767fecda2acc102fb144200c520d" %}
+{% set version = "1.6.0" %}
+{% set sha256 = "bd9213ce0856c24a74d88455c57354b375924b6508ac71939352ff3c23f07724" %}
 
 package:
   name: {{ name|lower }}
@@ -24,7 +24,7 @@ requirements:
     - cycler
     - databroker
     - doct
-    - event-model >=1.10.0
+    - event-model >=1.14.0
     - historydict
     - ipython
     - lmfit
