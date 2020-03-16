@@ -1,6 +1,6 @@
 {% set name = "bluesky" %}
-{% set version = "1.5.6" %}
-{% set sha256 = "6cd4601ca2ba5fdb1701ad3280ae56b016772d0f7da227a0c1a075a6e9a8c048" %}
+{% set version = "1.6.0" %}
+{% set sha256 = "bd9213ce0856c24a74d88455c57354b375924b6508ac71939352ff3c23f07724" %}
 
 package:
   name: {{ name|lower }}
@@ -24,13 +24,13 @@ requirements:
     - cycler
     - databroker
     - doct
-    - event-model >=1.10.0
+    - event-model >=1.14.0
     - historydict
     - ipython
     - lmfit
     - matplotlib
-    - msgpack-python
     - msgpack-numpy
+    - msgpack-python
     - numpy
     - ophyd
     - pyzmq
