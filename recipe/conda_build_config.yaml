@@ -3,4 +3,8 @@ channel_sources:
 channel_targets:
   - nsls2forge main
 python:
-  - '3.6'
+  - 3.6
+docker_image:
+  - nsls2/nsls2forge:latest
+cuda_compiler_version:
+  - None
